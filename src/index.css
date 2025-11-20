@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Exo 2', sans-serif;
+  background: #000;
+  color: #fff;
+  /* overflow: hidden; REMOVED - this prevents scrolling! */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(6, 182, 212, 0.3);
+  color: white;
+}
