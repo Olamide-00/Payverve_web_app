@@ -13,7 +13,6 @@ import {
   ArrowRight,
   Users,
   TrendingUp,
-  CheckCircle,
   Star,
   Award,
   Clock,
