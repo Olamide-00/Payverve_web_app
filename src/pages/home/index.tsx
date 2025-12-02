@@ -230,10 +230,15 @@ export default function Home() {
                   whileTap={{ scale: 0.95 }}
                   className="secondary-button"
                 >
-                  <span className="secondary-button-content">
-                    <Download className="w-5 h-5" />
-                    <span>Download App</span>
-                  </span>
+                  <a
+                    href="https://github.com/Remit-Organization/RemitApp/releases/download/payverve1.0.0/Payverve100.apk"
+                    download
+                    className="relative flex items-center justify-center space-x-3  text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition-all"
+                  >
+                    <Download className="w-6 h-6" />
+                    <span>Download App Now</span>
+                  </a>
+
                 </motion.button>
               </div>
 
@@ -701,10 +706,15 @@ export default function Home() {
                     transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
                     className="cta-shine"
                   />
-                  <span className="relative flex items-center justify-center space-x-3">
-                    <Download className="w-6 h-6" />
-                    <span>Download App Now</span>
-                  </span>
+            <a
+              href="https://github.com/Remit-Organization/RemitApp/releases/download/payverve1.0.0/Payverve100.apk"
+              download
+              className="relative flex items-center justify-center space-x-3 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition-all"
+            >
+              <Download className="w-6 h-6" />
+              <span>Download App Now</span>
+            </a>
+
                 </motion.button>
                 
                 <motion.button
