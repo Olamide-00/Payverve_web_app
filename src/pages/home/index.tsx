@@ -25,6 +25,7 @@ import {
   Cpu
 } from 'lucide-react';
 import './style.css';
+import banner from "../../assets/banner.png"
 
 export default function Home() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -284,7 +285,7 @@ export default function Home() {
                 }}
                 transition={{ duration: 10, repeat: Infinity }}
                 style={{ transformStyle: "preserve-3d" }}
-                className="relative"
+                className="relative mb-20"
               >
                 {/* Glow effect */}
                 <div className="phone-glow" />
@@ -296,88 +297,34 @@ export default function Home() {
                     <div className="phone-notch" />
                     
                     {/* Screen Content */}
-                    <div className="relative space-y-6">
+                    <div className="relative space-y-13 ">
                       {/* Header */}
                       <motion.div 
                         className="flex items-center justify-between"
                         animate={{ opacity: [0.5, 1, 0.5] }}
                         transition={{ duration: 3, repeat: Infinity }}
                       >
-                        <div className="flex items-center space-x-2">
+                        <div className="flex items-center space-x-5">
                           <div className="w-10 h-10 bg-linear-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center">
                             <Sparkles className="w-5 h-5 text-white" />
                           </div>
                           <span className="font-bold text-lg">PayVerve</span>
                         </div>
                         <CreditCard className="w-6 h-6 text-cyan-400" />
+                       
                       </motion.div>
-
-                      {/* Balance Card */}
-                      <motion.div
-                        className="relative overflow-hidden rounded-3xl p-6 bg-linear-to-br from-cyan-500 via-blue-600 to-purple-600"
-                        animate={{ 
-                          boxShadow: [
-                            "0 0 20px rgba(6, 182, 212, 0.5)",
-                            "0 0 40px rgba(6, 182, 212, 0.8)",
-                            "0 0 20px rgba(6, 182, 212, 0.5)"
-                          ]
-                        }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      >
-                        <div className="text-sm text-cyan-100 mb-2">Available Balance</div>
-                        <div className="text-3xl font-bold mb-4">₦125,000.00</div>
-                        <div className="flex items-center space-x-2">
-                          <TrendingUp className="w-4 h-4 text-green-300" />
-                          <span className="text-sm text-cyan-100">+12.5% this month</span>
-                        </div>
-                      </motion.div>
-
-                      {/* Quick Actions */}
-                      <div className="grid grid-cols-3 gap-3">
-                        {[
-                          { icon: Send, label: "Send", color: "from-cyan-500 to-blue-500" },
-                          { icon: Download, label: "Request", color: "from-purple-500 to-pink-500" },
-                          { icon: Zap, label: "Bills", color: "from-orange-500 to-yellow-500" }
-                        ].map((action, i) => (
-                          <motion.div
-                            key={action.label}
-                            whileHover={{ scale: 1.1 }}
-                            animate={{ y: [0, -5, 0] }}
-                            transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
-                            className={`backdrop-blur-xl bg-linear-to-br ${action.color} bg-opacity-20 rounded-2xl p-4 border border-white/10 text-center`}
-                          >
-                            <action.icon className="w-6 h-6 mx-auto mb-2 text-white" />
-                            <div className="text-xs">{action.label}</div>
-                          </motion.div>
-                        ))}
-                      </div>
-
-                      {/* Recent Transactions */}
-                      <div className="space-y-2">
-                        {[1, 2, 3].map((i) => (
-                          <motion.div
-                            key={i}
-                            initial={{ x: -20, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            transition={{ delay: 1 + i * 0.1 }}
-                            className="backdrop-blur-xl bg-white/5 rounded-xl p-3 border border-white/10 flex items-center justify-between"
-                          >
-                            <div className="flex items-center space-x-3">
-                              <div className="w-10 h-10 bg-linear-to-br from-cyan-500 to-blue-500 rounded-full" />
-                              <div className="text-left">
-                                <div className="text-sm font-medium">Transaction {i}</div>
-                                <div className="text-xs text-gray-400">Just now</div>
-                              </div>
-                            </div>
-                            <div className="text-green-400 font-semibold">+₦{5000 * i}</div>
-                          </motion.div>
-                        ))}
-                      </div>
                     </div>
                   </div>
                 </div>
               </motion.div>
-
+              {/* image banner */}
+             <div className="w-full flex justify-center">
+              <img
+                src={banner}
+                alt="Banner"
+                className="w-full max-w-4xl h-auto rounded-2xl object-contain"
+              />
+            </div>
               {/* Floating Elements */}
               <motion.div
                 animate={{ y: [0, -20, 0], rotate: [0, 360] }}
