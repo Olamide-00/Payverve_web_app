@@ -232,7 +232,7 @@ export default function Home() {
                   className="secondary-button"
                 >
                   <a
-                    href="https://github.com/Remit-Organization/RemitApp/releases/download/payverve1.0.0/Payverve100.apk"
+                    href="https://github.com/Olamide-00/Payverve_web_app/releases/download/payverve100/Payverve100.apk"
                     download
                     className="relative flex items-center justify-center space-x-3  text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition-all"
                   >
@@ -654,7 +654,7 @@ export default function Home() {
                     className="cta-shine"
                   />
             <a
-              href="https://github.com/Remit-Organization/RemitApp/releases/download/payverve1.0.0/Payverve100.apk"
+              href="https://github.com/Olamide-00/Payverve_web_app/releases/download/payverve100/Payverve100.apk"
               download
               className="relative flex items-center justify-center space-x-3 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition-all"
             >
